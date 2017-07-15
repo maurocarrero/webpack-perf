@@ -35,3 +35,21 @@ vendor.js   1.1 MB  5.77 s
 bundle.js   18.5 KB  1.74 s
 ```
 
+### Extract css file
+
+##### Summary
+```
+Requests: 5
+Transferred: 1.1 MB
+Finish: 5.83 s
+DOMContentLoaded: 5.81 s
+Load: 5.81 s
+```
+
+##### Files:
+```
+vendor.js   1.1 MB  5.77 s
+bundle.js   3.2 KB  1.74 s
+style.css   221 B   49 ms
+```
+

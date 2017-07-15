@@ -1,5 +1,6 @@
 const webpack = require('webpack')
 const pkg = require('./package.json')
+const ExtractTextPlugin = require('extract-text-webpack-plugin')
 
 module.exports = {
   context: __dirname + '/src',
@@ -23,11 +24,12 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        loader: 'style!css'
+        loader: ExtractTextPlugin.extract('style-loader', 'css-loader')
       }
     ]
   },
   plugins: [
-    new webpack.optimize.CommonsChunkPlugin('vendor', 'vendor.js', Infinity)
+    new webpack.optimize.CommonsChunkPlugin('vendor', 'vendor.js', Infinity),
+    new ExtractTextPlugin('styles.css')
   ]
 }
