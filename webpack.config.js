@@ -1,9 +1,11 @@
 const webpack = require('webpack')
+const pkg = require('./package.json')
 
 module.exports = {
   context: __dirname + '/src',
   entry: {
     app: './index.js',
+    vendor: Object.keys(pkg.dependencies)
   },
   output: {
     path: __dirname + '/public',
@@ -24,5 +26,8 @@ module.exports = {
         loader: 'style!css'
       }
     ]
-  }
+  },
+  plugins: [
+    new webpack.optimize.CommonsChunkPlugin('vendor', 'vendor.js', Infinity)
+  ]
 }
