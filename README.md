@@ -53,3 +53,20 @@ bundle.js   3.2 KB  1.74 s
 style.css   221 B   49 ms
 ```
 
+### Dedupe
+
+##### Summary
+```
+Requests: 5
+Transferred: 1.1 MB
+Finish: 5.78 s
+DOMContentLoaded: 5.76 s
+Load: 5.76 s
+```
+
+##### Files:
+```
+vendor.js   1.0 MB  5.65 s
+bundle.js   3.2 KB  1.59 s
+style.css   221 B   45 ms
+```
