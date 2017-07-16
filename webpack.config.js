@@ -3,7 +3,7 @@ const pkg = require('./package.json')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const VendorChunkPlugin = require('webpack-vendor-chunk-plugin')
 
-const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
+// const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
 
 
 module.exports = {
@@ -33,15 +33,23 @@ module.exports = {
     ]
   },
   plugins: [
+    new webpack.DefinePlugin({
+      'process.env': {
+        NODE_ENV: JSON.stringify('production')
+      }
+    }),
     new webpack.optimize.DedupePlugin(),
     new webpack.optimize.UglifyJsPlugin({
       compress: {
         warnings: false
       }
     }),
-    new webpack.optimize.CommonsChunkPlugin('vendor', 'vendor.js', Infinity),
+    new webpack.optimize.CommonsChunkPlugin({
+      name: 'vendor',
+      filename: 'vendor.js'
+    }),
     new VendorChunkPlugin('vendor'),
     new ExtractTextPlugin('styles.css'),
-    new BundleAnalyzerPlugin()
+    // new BundleAnalyzerPlugin()
   ]
 }

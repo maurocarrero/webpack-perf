@@ -88,3 +88,21 @@ vendor.js   277 KB  1.52 s
 bundle.js   1.6 KB  80 ms
 style.css   221 B   51 ms
 ```
+
+### PRODUCTION BUILD
+
+##### Summary
+```
+Requests: 5
+Transferred: 203 KB
+Finish: 1.24 s
+DOMContentLoaded: 1.22 s
+Load: 1.22 s
+```
+
+##### Files:
+```
+vendor.js   201 KB  1.11 s
+bundle.js   1.6 KB  74 ms
+style.css   221 B   44 ms
+```
