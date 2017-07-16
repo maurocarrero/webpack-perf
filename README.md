@@ -70,3 +70,21 @@ vendor.js   1.0 MB  5.65 s
 bundle.js   3.2 KB  1.59 s
 style.css   221 B   45 ms
 ```
+
+### Uglify
+
+##### Summary
+```
+Requests: 5
+Transferred: 280 KB
+Finish: 1.65 s
+DOMContentLoaded: 1.63 s
+Load: 1.63 s
+```
+
+##### Files:
+```
+vendor.js   277 KB  1.52 s
+bundle.js   1.6 KB  80 ms
+style.css   221 B   51 ms
+```

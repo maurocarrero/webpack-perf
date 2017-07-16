@@ -34,6 +34,11 @@ module.exports = {
   },
   plugins: [
     new webpack.optimize.DedupePlugin(),
+    new webpack.optimize.UglifyJsPlugin({
+      compress: {
+        warnings: false
+      }
+    }),
     new webpack.optimize.CommonsChunkPlugin('vendor', 'vendor.js', Infinity),
     new VendorChunkPlugin('vendor'),
     new ExtractTextPlugin('styles.css'),
