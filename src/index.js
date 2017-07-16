@@ -1,8 +1,10 @@
+import * as OfflinePluginRuntime from 'offline-plugin/runtime'
+OfflinePluginRuntime.install()
+
 import React from 'react'
 import ReactDOM from 'react-dom'
 import _ from 'ramda'
 import { isEmpty, isArray } from 'lodash'
-
 import './styles.css'
 
 import kakashiAnbu from './Kakashi_Anbu.png'
