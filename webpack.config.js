@@ -2,8 +2,9 @@ const webpack = require('webpack')
 const pkg = require('./package.json')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const VendorChunkPlugin = require('webpack-vendor-chunk-plugin')
+const LodashModuleReplacementPlugin = require('lodash-webpack-plugin');
 
-// const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
 
 
 module.exports = {
@@ -23,12 +24,17 @@ module.exports = {
         loader: 'babel',
         exclude: /node_modules/,
         query: {
+          plugins: ['lodash'],
           presets: [ 'react', 'es2015' ]
         }
       },
       {
         test: /\.css$/,
         loader: ExtractTextPlugin.extract('style-loader', 'css-loader')
+      },
+      {
+        test: /\.(jpe?g|png|gif|svg)$/i,
+        loader: "file-loader?name=[name].[ext]"
       }
     ]
   },
@@ -39,6 +45,7 @@ module.exports = {
       }
     }),
     new webpack.optimize.DedupePlugin(),
+    new LodashModuleReplacementPlugin(),
     new webpack.optimize.UglifyJsPlugin({
       compress: {
         warnings: false
@@ -50,6 +57,12 @@ module.exports = {
     }),
     new VendorChunkPlugin('vendor'),
     new ExtractTextPlugin('styles.css'),
-    // new BundleAnalyzerPlugin()
-  ]
+    new BundleAnalyzerPlugin()
+  ],
+  resolve: {
+    alias: {
+      'react': 'preact-compat',
+      'react-dom': 'preact-compat'
+    }
+  }
 }

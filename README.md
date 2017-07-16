@@ -106,3 +106,21 @@ vendor.js   201 KB  1.11 s
 bundle.js   1.6 KB  74 ms
 style.css   221 B   44 ms
 ```
+
+### PREACT with preact-compat alias
+
+##### Summary
+```
+Requests: 5
+Transferred: 80.6 KB
+Finish: 568 ms
+DOMContentLoaded: 563 ms
+Load: 562 ms
+```
+
+##### Files:
+```
+vendor.js   78.3 KB  477 ms
+bundle.js   1.6 KB  80 ms
+style.css   221 B   51 ms
+```
