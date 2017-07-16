@@ -124,3 +124,43 @@ vendor.js   78.3 KB  477 ms
 bundle.js   1.6 KB  80 ms
 style.css   221 B   51 ms
 ```
+
+### Lodash and Images
+
+##### Summary
+```
+Requests: 6
+Transferred: 593 KB
+Finish: 3.27 s
+DOMContentLoaded: 941 ms
+Load: 3.27 ms
+```
+
+##### Files:
+```
+vendor.js           148 KB  844 ms
+bundle.js           3.3 KB  88 ms
+style.css           221 B   43 ms
+Kakashi_Anbu.png    440 KB  2.33 s
+```
+
+### Imagemin compression
+
+##### Summary
+```
+Requests: 6
+Transferred: 524 KB
+Finish: 2.91 s
+DOMContentLoaded: 951 ms
+Load: 2.91 ms
+```
+
+##### Files:
+```
+vendor.js           148 KB  851 ms
+bundle.js           3.3 KB  95 ms
+style.css           221 B   50 ms
+Kakashi_Anbu.png    370 KB  1.97 s
+```
+
+

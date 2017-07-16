@@ -2,7 +2,8 @@ const webpack = require('webpack')
 const pkg = require('./package.json')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const VendorChunkPlugin = require('webpack-vendor-chunk-plugin')
-const LodashModuleReplacementPlugin = require('lodash-webpack-plugin');
+const LodashModuleReplacementPlugin = require('lodash-webpack-plugin')
+const ImageminPlugin = require('imagemin-webpack-plugin').default
 
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
 
@@ -51,6 +52,7 @@ module.exports = {
         warnings: false
       }
     }),
+    new ImageminPlugin({ test: /\.(jpe?g|png|gif|svg)$/i }),
     new webpack.optimize.CommonsChunkPlugin({
       name: 'vendor',
       filename: 'vendor.js'
