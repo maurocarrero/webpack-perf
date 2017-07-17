@@ -1,0 +1,1 @@
+webpackJsonp([2],{233:function(e,t,n){"use strict";function u(e){return e&&e.__esModule?e:{default:e}}Object.defineProperty(t,"__esModule",{value:!0});var a=n(16),r=u(a),c=n(252),f=u(c);t.default=function(){return r.default.createElement("img",{src:f.default,alt:"Kakashi ANBU"})}},252:function(e,t,n){e.exports=n.p+"Kakashi_Anbu.png"}});
