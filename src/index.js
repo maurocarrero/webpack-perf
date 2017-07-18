@@ -14,6 +14,7 @@ import ramdaTest from './routes/ramdaTest'
 const rootRoute = {
   path: '/',
   component: App,
+  indexRoute: kakashi,
   childRoutes: [
     kakashi,
     lodashTest,

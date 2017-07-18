@@ -1,11 +1,22 @@
+const path = require('path')
+
+const PUBLIC_PATH = path.join(__dirname, '/public')
+
 module.exports = {
   context: __dirname + '/src',
   entry: {
     app: './index.js'
   },
   output: {
-    path: __dirname + '/public',
+    path: PUBLIC_PATH,
     filename: 'bundle.js'
+  },
+  devServer: {
+    contentBase: PUBLIC_PATH,
+    port: 8000,
+    historyApiFallback: {
+      index: 'index.html'
+    }
   },
   module: {
     loaders: [

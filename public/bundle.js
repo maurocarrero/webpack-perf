@@ -79,6 +79,7 @@
 	var rootRoute = {
 	  path: '/',
 	  component: _App2.default,
+	  indexRoute: _kakashi2.default,
 	  childRoutes: [_kakashi2.default, _lodashTest2.default, _ramdaTest2.default]
 	};
 

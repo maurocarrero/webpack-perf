@@ -7,25 +7,17 @@
 ##### Summary
 
 ```
-Requests: 3
-Transferred: 1.8 MB
-Finish: 9.60 s
-DOMContentLoaded: 9.57 s
-Load: 9.58 s
-```
-
-##### When changing to Kakashi route, a big image is downloaded, updating summary:
-
-```
 Requests: 4
 Transferred: 2.2 MB
-Finish: 1.5 min
+Finish: 11.91 s
+DOMContentLoaded: 9.58 s
+Load: 11.91 s
 ```
 
 ##### Assets:
 ```
 Version: webpack 1.15.0
-Time: 2348ms
+Time: 2253ms
            Asset     Size  Chunks             Chunk Names
 Kakashi_Anbu.png   450 kB          [emitted]
        bundle.js  1.85 MB       0  [emitted]  app
