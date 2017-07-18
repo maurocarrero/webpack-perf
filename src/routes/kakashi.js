@@ -1,8 +1,8 @@
 module.exports = {
   path: 'kakashi',
-  getComponent(nextState, cb) {
+  getComponent(_, cb) {
     require.ensure([], (require) => {
-      cb(null, require('../components/Kakashi'))
+      cb(null, require('../components/Kakashi').default)
     })
   }
 }

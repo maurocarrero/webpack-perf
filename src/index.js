@@ -15,15 +15,13 @@ import lodashTest from './routes/lodashTest'
 import ramdaTest from './routes/ramdaTest'
 
 const rootRoute = {
-  childRoutes: [ {
-    path: '/public',
-    component: App,
-    childRoutes: [
-      kakashi,
-      lodashTest,
-      ramdaTest
-    ]
-  } ]
+  path: '/',
+  component: App,
+  childRoutes: [
+    kakashi,
+    lodashTest,
+    ramdaTest
+  ]
 }
 
 ReactDOM.render(

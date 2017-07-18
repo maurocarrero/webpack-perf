@@ -1,8 +1,8 @@
 module.exports = {
   path: 'lodash-test',
-  getComponent(nextState, cb) {
+  getComponent(_, cb) {
     require.ensure([], (require) => {
-      cb(null, require('../components/LodashTest'))
+      cb(null, require('../components/LodashTest').default)
     })
   }
 }

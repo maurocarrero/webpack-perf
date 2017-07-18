@@ -1,13 +1,12 @@
 const webpack = require('webpack')
-const CleanWebpackPlugin = require('clean-webpack-plugin')
-const VendorChunkPlugin = require('webpack-vendor-chunk-plugin')
-const LodashModuleReplacementPlugin = require('lodash-webpack-plugin')
-const ImageminPlugin = require('imagemin-webpack-plugin').default
-const OfflinePlugin = require('offline-plugin')
-const HtmlWebpackPlugin = require('html-webpack-plugin')
-const ExtractTextPlugin = require('extract-text-webpack-plugin')
-
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
+const CleanWebpackPlugin = require('clean-webpack-plugin')
+const ExtractTextPlugin = require('extract-text-webpack-plugin')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+const ImageminPlugin = require('imagemin-webpack-plugin').default
+const LodashModuleReplacementPlugin = require('lodash-webpack-plugin')
+const OfflinePlugin = require('offline-plugin')
+const VendorChunkPlugin = require('webpack-vendor-chunk-plugin')
 
 module.exports = [
   new CleanWebpackPlugin(['public'], {

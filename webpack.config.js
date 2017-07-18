@@ -15,6 +15,7 @@ module.exports = {
   },
   module: { loaders },
   plugins,
+  // // PREACT
   // resolve: {
   //   alias: {
   //     'react': 'preact-compat',

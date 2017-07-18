@@ -1,8 +1,8 @@
 module.exports = {
   path: 'ramda-test',
-  getComponent(nextState, cb) {
+  getComponent(_, cb) {
     require.ensure([], (require) => {
-      cb(null, require('../components/RamdaTest'))
+      cb(null, require('../components/RamdaTest').default)
     })
   }
 }
