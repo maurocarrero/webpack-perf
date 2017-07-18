@@ -5,17 +5,31 @@
 ### Without tuning:
 
 ##### Summary
+
 ```
 Requests: 3
-Transferred: 1.1 MB
-Finish: 5.88 s
-DOMContentLoaded: 5.86 s
-Load: 5.87 s
+Transferred: 1.8 MB
+Finish: 9.60 s
+DOMContentLoaded: 9.57 s
+Load: 9.58 s
 ```
 
-##### Files:
+##### When changing to Kakashi route, a big image is downloaded, updating summary:
+
 ```
-bundle.js   1.1 MB  5.75 s
+Requests: 4
+Transferred: 2.2 MB
+Finish: 1.5 min
+```
+
+##### Assets:
+```
+Version: webpack 1.15.0
+Time: 2348ms
+           Asset     Size  Chunks             Chunk Names
+Kakashi_Anbu.png   450 kB          [emitted]
+       bundle.js  1.85 MB       0  [emitted]  app
+    + 575 hidden modules
 ```
 
 ### Split vendor chunk

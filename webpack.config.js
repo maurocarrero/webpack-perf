@@ -1,25 +1,30 @@
-const pkg = require('./package.json')
-const loaders = require('./cfg/webpack.loaders')
-const plugins = require('./cfg/webpack.plugins')
-
 module.exports = {
   context: __dirname + '/src',
   entry: {
-    app: './index.js',
-    vendor: Object.keys(pkg.dependencies)
+    app: './index.js'
   },
   output: {
     path: __dirname + '/public',
-    filename: '[hash].bundle.js',
-    chunkFilename: '[id].[hash].bundle.js'
+    filename: 'bundle.js'
   },
-  module: { loaders },
-  plugins,
-  // // PREACT
-  // resolve: {
-  //   alias: {
-  //     'react': 'preact-compat',
-  //     'react-dom': 'preact-compat'
-  //   }
-  // }
+  module: {
+    loaders: [
+      {
+        test: /\.js$/,
+        loader: 'babel',
+        exclude: /node_modules/,
+        query: {
+          presets: [ 'react', 'es2015' ]
+        }
+      },
+      {
+        test: /\.css$/,
+        loader: 'style-loader!css-loader'
+      },
+      {
+        test: /\.(jpe?g|png|gif|svg)$/i,
+        loader: "file-loader?name=[name].[ext]"
+      }
+    ]
+  }
 }
