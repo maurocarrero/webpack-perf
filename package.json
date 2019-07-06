@@ -6,7 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack-dev-server",
-    "dist": "webpack -p --progress --colors"
+    "dist": "webpack -p --progress --colors",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "author": "Mauro Carrero",
   "license": "ISC",
@@ -40,6 +42,8 @@
     "ramda": "^0.24.1",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
-    "react-router": "^3.0.0"
-  }
+    "react-router": "^3.0.0",
+    "snyk": "^1.192.3"
+  },
+  "snyk": true
 }
